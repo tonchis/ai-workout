@@ -273,15 +273,17 @@ document.addEventListener("DOMContentLoaded", function() {
       pulga.style.display = "block";
       day1.setAttribute("href", "#pulga-day1");
       day2.setAttribute("href", "#pulga-day2");
-      day3.style.display = "none";
+      if (day3) day3.style.display = "none";
     } else {
       titleLink.textContent = "Workout - Tonchis";
       tonchis.style.display = "block";
       pulga.style.display = "none";
       day1.setAttribute("href", "#day1");
       day2.setAttribute("href", "#day2");
-      day3.setAttribute("href", "#day3");
-      day3.style.display = "inline";
+      if (day3) {
+        day3.setAttribute("href", "#day3");
+        day3.style.display = "inline";
+      }
     }
   });
 });
